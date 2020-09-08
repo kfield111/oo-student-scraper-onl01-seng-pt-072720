@@ -12,6 +12,7 @@ class Scraper
     doc = Nokogiri::HTML(open(index_url))
     doc.css("div.roster-cards-container").each do |temp|
       student = {name: temp.css("h4.student-name").text, location: temp.css("p.student-location").text, profile_url: temp.css("div.student-card a").map {|link| link['href']}}
+      binding.pry
       scrapped_students << student
     end
     scrapped_students
