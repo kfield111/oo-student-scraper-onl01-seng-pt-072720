@@ -14,7 +14,7 @@ class Scraper
     doc.CSS("div.roster-cards-container").each do |temp|
         scraped_students[temp] = {}
       end
-      projects
+      scraped_students
   end
 
   def self.scrape_profile_page(profile_url)
