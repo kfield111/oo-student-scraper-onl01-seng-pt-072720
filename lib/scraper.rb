@@ -13,7 +13,6 @@ class Scraper
     doc.css("div.roster-cards-container").each do |temp|
       student = {name: temp.css("h4.student-name").text, location: temp.css("p.student-location").text, profile_url: temp.css("div.student-card a").map {|link| link['href']}}
       scrapped_students << student
-      binding.pry
     end
     scrapped_students
   end
