@@ -21,13 +21,16 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
 
-    student_info = {}
+  
 
     profile_page = Nokogiri::HTML(open(profile_url))
     social_media_hrefs = profile_page.css("div.social-icon-container a").map {|link| link['href']}
+    
 
-      student_info = {twitter: social_media_hrefs[0], linkedin: social_media_hrefs[1], github: social_media_hrefs[2], blog: social_media_hrefs[3],
-      profile_quote: profile_page.css('div.profile-quote').text, bio: profile_page.css("div.description-holder p").text}
+
+    #need to dynamically add social media key name and associated href value rather than hard coding in keys for the hash
+
+      student_info = {profile_quote: profile_page.css('div.profile-quote').text, bio: profile_page.css("div.description-holder p").text}
   end
 
 end
