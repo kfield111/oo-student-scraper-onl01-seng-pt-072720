@@ -28,7 +28,7 @@ class Scraper
 
     profile_page.css("div.details-container").each do |temp|
       student_info = {twitter: social_media_hrefs[0], linkedin: social_media_hrefs[1], github: social_media_hrefs[2], blog: social_media_hrefs[3],
-      biography: temp.css("div.description-holder p").text}
+      bio: temp.css("div.description-holder p").text,                }
       end
       student_info
   end
