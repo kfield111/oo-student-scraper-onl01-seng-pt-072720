@@ -39,8 +39,8 @@ class Scraper
         student_info[:blog] = temp
       end
     end
+    student_info
 
-    #need to dynamically add social media key name and associated href value rather than hard coding in keys for the hash
   end
 
 end
