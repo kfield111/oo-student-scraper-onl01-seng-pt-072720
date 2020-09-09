@@ -26,7 +26,7 @@ class Scraper
     profile_page = Nokogiri::HTML(open(profile_url))
     social_media_hrefs = profile_page.css("div.social-icon-container a").map {|link| link['href']}
 
-    testy = profile_page.css("div.profile-quote")
+    profile_page.css("div.profile-quote")
 
     binding.pry
 
