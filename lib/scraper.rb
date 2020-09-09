@@ -25,7 +25,7 @@ class Scraper
 
     profile_page = Nokogiri::HTML(open(profile_url))
     profile_page.css("div.details-container").each do |temp|
-      student_info = {twitter: temp.css("a")["href"], biography: temp.css("div.description-holder p").text}
+      student_info = {twitter: temp.css("a"), biography: temp.css("div.description-holder p").text}
       end
       student_info
   end
