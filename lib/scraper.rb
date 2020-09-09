@@ -27,8 +27,6 @@ class Scraper
     profile_page.css("div.details-container").each do |temp|
       student_data = {biography: temp.css("div.description-holder p").text}
       end
-
-
   end
 
 end
