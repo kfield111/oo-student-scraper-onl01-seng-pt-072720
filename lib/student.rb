@@ -13,7 +13,7 @@ class Student
     @@all << self
   end
 
-  def self.create_from_collection(student_index_array)
+  def self.create_from_collection(students_array)
    @@all << student_index_array.map
   end
 
