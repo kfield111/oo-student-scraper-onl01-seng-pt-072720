@@ -36,6 +36,7 @@ class Scraper
       else
         student[:blog] = temp
       end
+    end
 
 
     #need to dynamically add social media key name and associated href value rather than hard coding in keys for the hash
