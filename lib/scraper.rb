@@ -26,6 +26,7 @@ class Scraper
     profile_page = Nokogiri::HTML(open(profile_url))
     profile_page.css("div.details-container").each do |temp|
       student_data = {biography: temp.css("div.description-holder p").text}
+      end
 
 
   end
