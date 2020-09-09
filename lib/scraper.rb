@@ -27,7 +27,7 @@ class Scraper
     social_media_hrefs = profile_page.css("div.social-icon-container a").map {|link| link['href']}
 
       student_info = {twitter: social_media_hrefs[0], linkedin: social_media_hrefs[1], github: social_media_hrefs[2], blog: social_media_hrefs[3],
-      profile_quote: temp.css('div.profile-quote').text, bio: temp.css("div.description-holder p").text}
+      profile_quote: profile_page.css('div.profile-quote').text, bio: profile_page.css("div.description-holder p").text}
   end
 
 end
