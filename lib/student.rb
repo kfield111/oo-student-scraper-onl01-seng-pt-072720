@@ -13,8 +13,8 @@ class Student
     @@all << self
   end
 
-  def self.create_from_collection(students_array)
-    
+  def self.create_from_collection(student_index_array)
+    new_student = Scraper.scrape_index_page()
   end
 
   def add_student_attributes(attributes_hash)
