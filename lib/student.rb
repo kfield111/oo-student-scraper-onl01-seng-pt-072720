@@ -7,9 +7,9 @@ class Student
   def initialize(student_hash)
     @name = student_hash[:name]
     @location = student_hash[:location]
-    @profile_quote = profile_quote
-    @bio = bio
-    @profile_url = profile_url
+    @profile_quote = student_hash[:profile_quote]
+    @bio = student_hash[:bio]
+    @profile_url = student_hash[:profile_url]
     @@all << self
   end
 
