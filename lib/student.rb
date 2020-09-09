@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    @name = name
+    @name = :name
     @location = location
     @profile_quote = profile_quote
     @bio = bio
