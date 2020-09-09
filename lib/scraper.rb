@@ -26,6 +26,8 @@ class Scraper
     profile_page = Nokogiri::HTML(open(profile_url))
     social_media_hrefs = profile_page.css("div.social-icon-container a").map {|link| link['href']}
 
+    student_info = {profile_quote: profile_page.css('div.profile-quote').text, bio: profile_page.css("div.description-holder p").text}
+
     social_media_hrefs.each do |temp|
       if temp.include?("twitter")
         student_info[:twitter] = temp
@@ -39,8 +41,6 @@ class Scraper
     end
 
     #need to dynamically add social media key name and associated href value rather than hard coding in keys for the hash
-
-      student_info = {profile_quote: profile_page.css('div.profile-quote').text, bio: profile_page.css("div.description-holder p").text}
   end
 
 end
