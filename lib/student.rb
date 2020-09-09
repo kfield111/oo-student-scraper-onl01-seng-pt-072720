@@ -22,7 +22,7 @@ class Student
   def add_student_attributes(attributes_hash)
     @bio = attributes_hash[:bio]
     @blog = attributes_hash[:blog]
-    @linkedin = attributes_hash[:linkden]
+    @linkedin = attributes_hash[:linkedin]
 
   end
 
