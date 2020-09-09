@@ -32,9 +32,9 @@ class Scraper
       elsif temp.include?("linkedin")
         student_info[:linkedin] = temp
       elsif temp.include?("github")
-        student[:github] = temp
+        student_info[:github] = temp
       else
-        student[:blog] = temp
+        student_info[:blog] = temp
       end
     end
 
