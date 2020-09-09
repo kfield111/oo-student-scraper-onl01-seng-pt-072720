@@ -14,11 +14,11 @@ class Student
   end
 
   def self.create_from_collection(student_index_array)
-    new_student = Scraper.scrape_index_page()
+    Scraper.scrape_index_page(student_index_array)
   end
 
   def add_student_attributes(attributes_hash)
-
+    
   end
 
   def self.all
