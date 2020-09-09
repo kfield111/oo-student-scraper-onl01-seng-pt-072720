@@ -22,13 +22,9 @@ class Scraper
   def self.scrape_profile_page(profile_url)
 
     student_info = {}
-    social_media_hrefs = []
 
     profile_page = Nokogiri::HTML(open(profile_url))
-    profile_page.css("div.social-icon-container").each do |temp|
-      social_media_hrefs << temp.css("a")
-    end
-    social_media_hrefs
+    social_media_hrefs = temp.css("div.social-icon-container a").map {|temp| temp['href']}
 
     profile_page.css("div.details-container").each do |temp|
       student_info = {twitter: social_media_hrefs[0], biography: temp.css("div.description-holder p").text}
