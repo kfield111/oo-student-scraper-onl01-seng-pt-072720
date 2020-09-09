@@ -20,8 +20,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    Scraper.scrape_profile_page(profile_url)
-    student_info[:bio] = attributes_hash
+    @bio = attributes_hash[:bio]
   end
 
   def self.all
