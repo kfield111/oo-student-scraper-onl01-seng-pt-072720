@@ -30,7 +30,7 @@ class Scraper
 
     binding.pry
 
-    profile_page.css("div.details-container").each do |temp|
+    profile_page.css("div.main-wrapper-container").each do |temp|
       student_info = {twitter: social_media_hrefs[0], linkedin: social_media_hrefs[1], github: social_media_hrefs[2], blog: social_media_hrefs[3],
       profile_quote: temp.css('div.profile-quote').text, bio: temp.css("div.description-holder p").text}
       end
